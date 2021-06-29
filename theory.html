@@ -1,0 +1,145 @@
+      <!DOCTYPE html>
+      <html>
+        <head>
+            <meta charset="utf-8" />
+            <link rel="stylesheet" href="round-template/experiment/simulation/css/mainpage.css">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+            <title>theory</title>
+        </head>
+        <body class='markdown-preview' data-use-github-style>
+          <div class="heading">
+            <h1>Virtual Lab</h1>
+            <h5>Summer and Subtractor using Operational Amplifier 741.</h5>
+    <a  class="feedback" href="https://forms.gle/JmJHpTaFjRuFZXje6">Feedback</a>
+        </div>
+        
+        <div class="sidebar">
+          <a href="index.html">Aim</a>
+          <a href="theory.html">Theory</a>
+          <a href="pretest.html">Pre Test</a>
+          <a href="procedure.html">Procedure</a>
+          <a href="simulation.html">Simulation</a>
+          <a href="posttest.html">Post Test</a>
+          <a href="references.html">References</a>
+        </div>
+        <div class="content">
+          <h1 id="operational-amplifier-ic-741">Operational Amplifier IC 741</h1>
+
+<p align="center">
+<img src="https://firebasestorage.googleapis.com/v0/b/vlab-29a0a.appspot.com/o/vlab1%2Fop-amp.png?alt=media&amp;token=a8917aad-7706-4995-883f-a7770375e3a4" alt="Op-Amp" height="300" width="400">
+</p>
+
+<ul>
+<li>IC 741  is a monolithic IC, comprising of a general purpose Operational Amplifier.</li>
+<li>It has 7 functional pins, 4 pins capable of taking input and 1 pin for output . The Op-Amp is a 'Linear Amplifier' with an enormous variety of uses. </li>
+<li>The Op-Amp has inverting ( - ) and non-inverting (+) inputs, and an output at pin 6.</li>
+<li>In a circuit, the IC can be used  in two ways. </li>
+<li>For inverting amplifier ,  the voltage goes into pin two.</li>
+<li>For non-inverting amplifier , the voltage goes into pin three.</li>
+<li>Here , we are going to see the use of Op - Amp as a summer and a subtractor.</li>
+</ul>
+<p align="center">
+<img src="https://firebasestorage.googleapis.com/v0/b/vlab-29a0a.appspot.com/o/vlab1%2Fgraph.png?alt=media&amp;token=c2a90117-47f4-4321-8b84-9d9f60685f95" alt="Op-Amp-Graph" height="300" width="400">
+</p>
+
+<p align="center">Citation : From Opamp - Operational Amplifier By electroSome</p>
+
+<h1 id="summing-amplifier">Summing Amplifier</h1>
+<ul>
+<li>The Summing Amplifier is a type of Op - Amp circuit configuration . </li>
+<li>It is used to add all the voltages present on two or more inputs to get a single summing output voltage.</li>
+<li>If we add more input resistors to the input, each equal in value to the original input resistor, (Rin) we end up with an operational amplifier circuit called a Summing Amplifier</li>
+<li>In this Summing Circuit, the output voltage, ( Vout ) now becomes proportional to the sum of the input voltages, V1, V2, V3, etc. </li>
+<li>The resistors could be chosen according to our design requirement of summing amplifier wherein the output is proportional to the amplified sum of all inputs.</li>
+<li>The current is calculated as , If = I1 + I2 + I3 = -[ V1/Rin + V2/Rin + V3/Rin ]</li>
+</ul>
+<p align="center">
+<img src="https://firebasestorage.googleapis.com/v0/b/vlab-29a0a.appspot.com/o/vlab1%2Fsumming_amplifier.png?alt=media&amp;token=9b939f71-11be-4789-a3f0-ba96b5589c1e" alt="Summer" height="300" width="400">
+</p>
+
+<p align="center">Citation : From Inverting and Non Inverting Summing Amplifier - Voltage Adder By Electronics Hub</p>
+
+<h3 id="inverting-equation">Inverting Equation</h3>
+<ul>
+<li>-Rf/ Rin ( Vin )</li>
+<li>=&gt; -Vout = Rf/Rin *V1 + Rf/Rin *V2 + Rf/Rin *V3</li>
+</ul>
+<h3 id="summing-amplifier-equation-">Summing Amplifier Equation :</h3>
+<ul>
+<li>-Vout = Rf/ Rin (V1 + V2 + V3 +  .. )</li>
+<li>If  Rf = Rin,  -Vout = (V1 + V2 = V3 + … )</li>
+<li>=&gt; Vout = -(V1 + V2 + V3 + … )</li>
+</ul>
+<h2 id="applications-of-summing-amplifier">Applications Of Summing Amplifier</h2>
+<ul>
+<li>Allows audio experts to combine signals from various channels.</li>
+<li>Every audio input can be configured independently without affecting the output. </li>
+<li>Used in digital to analog converter.</li>
+</ul>
+<h2 id="advantages-of-summing-amplifier">Advantages Of Summing Amplifier</h2>
+<ul>
+<li>The summing point is virtually at earth potential .Hence , the signals from each different channel do not affect each other.</li>
+<li>Each channel can be summed or mixed regardless of the signal level and source impedance .</li>
+</ul>
+<h2 id="disadvantages-of-summing-amplifier">Disadvantages Of Summing Amplifier</h2>
+<ul>
+<li>If you disconnect one of the inputs,it doubles the gain of the circuit  for the remaining channel which is connected . But in inverting summing amplifier ,  it generates a virtual earth summing point</li>
+</ul>
+<h1 id="differential-amplifier">Differential Amplifier</h1>
+<p align="center">
+<img src="https://firebasestorage.googleapis.com/v0/b/vlab-29a0a.appspot.com/o/vlab1%2Fsubtractor_ampifier.png?alt=media&amp;token=d9d3f95d-c2d4-4eb1-b509-3cd7ea30a836" alt="Subtractor" height="300" width="400">
+</p>
+
+<p align="center">Citation : From Differential Amplifier By Wikipedia</p>
+
+
+<ul>
+<li><p>The differential amplifier amplifies the difference in voltage , which is present on its inverting and non-inverting inputs.</p>
+</li>
+<li><p>All Op-Amps are “Differential Amplifiers" , because of their input configuration.</p>
+</li>
+<li><p>By connecting a voltage signal onto an input terminal and another voltage signal onto  other input terminal  , the resultant will be directly proportional to the difference between the two input voltages  , V1 and V2.</p>
+</li>
+<li><p>By connecting the inputs to make 0v ground, superposition can be used to solve for the output voltage Vout. </p>
+</li>
+<li><p>The transfer function of a subtractor is given as:</p>
+</li>
+<li><p>I1 = (V1 - Va) / R1 , I2 = (V2 - Vb) / R2 , If = (Va - Vout) / R3</p>
+</li>
+<li><p>Summing point , Va = Vb and Vb = V2 * (R4) / (R2 + R4)</p>
+</li>
+<li><p>If V2 = 0, then Vout(a) = -V1 * (R3/R1)</p>
+</li>
+<li><p>If V1 = 0, then Vout(b) =  V2 * (R4) / (R2 + R4) * (R1 + R3) / (R1)</p>
+</li>
+<li><p>Vout = -Vout(a) + Vout(b)</p>
+</li>
+</ul>
+<h3 id="differential-amplifier-equation-">Differential Amplifier Equation :</h3>
+<ul>
+<li>Vout = R3/R1 * ( V2 - V1)</li>
+<li>If R3 = R1 , then Vout = V2 - V1</li>
+</ul>
+<h2 id="applications-of-differential-amplifier">Applications Of Differential Amplifier</h2>
+<ul>
+<li>Used in series negative feedback circuit.</li>
+<li>Used as a volume control circuit.</li>
+<li>Used as an automatic gain control circuit.</li>
+</ul>
+<h2 id="advantages-of-differential-amplifier">Advantages Of Differential Amplifier</h2>
+<ul>
+<li>Manipulates differential signals.</li>
+<li>Provide immunity to external noise, a 6-dB increase in dynamic range, which gives a clear advantage for low-voltage systems .</li>
+<li>They reduce second-order harmonics.</li>
+</ul>
+<h2 id="disadvantages-of-differential-amplifier">Disadvantages Of Differential Amplifier</h2>
+<ul>
+<li>Complexity is the main drawback of Differential Amplifier.</li>
+<li>To make a balanced differential amplifier,we need atleast two differential amplifiers ,  using a configuration known as a long-tailed pair. </li>
+<li>In practice, you need more components to further amplify the output,with provide biasing and so on.</li>
+</ul>
+
+        </div>
+        </body>
+      </html>
