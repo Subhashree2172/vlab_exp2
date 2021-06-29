@@ -50,7 +50,6 @@ function submit_it() {
    if(value_arr[2] === 1){
      document.getElementById("question_3").innerHTML = "Correct answer!!!";
    }else{
-     alert("wrong one")
      document.getElementById("question_3").innerHTML = "Wrong answer! "+"  "+"<br>Correct answer: b) Output Offset Voltage";
      document.getElementById("question_3").style.color = "red";
    }
